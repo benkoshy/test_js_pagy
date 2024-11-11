@@ -1,0 +1,5 @@
+<% if @pagy&.next %>
+  <%= turbo_frame_tag "pagination", loading: :lazy, src: {page: @pagy.next, format: :turbo_stream} do %>
+      <p>The next pagy is loading shortly....</p>
+  <% end %>
+<% end %>

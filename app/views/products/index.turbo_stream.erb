@@ -1,0 +1,13 @@
+
+
+<%= turbo_stream.append "products" do %>
+  <%= render partial: "product", collection: @products %>
+<% end %>
+
+
+<%= turbo_stream.update "pagination" do %>
+  <%= render partial: "pagination" %>
+<% end %>
+
+
+

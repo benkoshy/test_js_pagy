@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-    @products = Product.all
+    @pagy, @products = pagy_keyset(Product.all.order(:id)) 
   end
   
 end
